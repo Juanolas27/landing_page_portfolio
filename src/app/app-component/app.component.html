@@ -1,16 +1,138 @@
 <section class="min-h-screen w-screen h-auto bg-[#3F3F37]">
-    <section class="flex flex-col items-center pt-24 w-full h-auto" style="padding-top: 5rem;">
+    <section class="flex flex-col items-center pt-8 w-full h-auto">
         <div class="rounded-full bg-[url('/images/imagen_mia.jpg')] h-40 w-40 bg-cover bg-bottom"></div>
-        <h1 class="text-[#D6D6B1] text-2xl font-bold top-[2px]">David Barriuso Rozalén</h1>
+        <h1 class="text-[#D6D6B1] pt-4 text-2xl font-bold top-[2px]">David Barriuso Rozalén</h1>
     </section>
-    <nav class="w-screen h-auto flex justify-center" style="padding-top: 2rem;">
+    <nav class="w-screen h-auto flex justify-center pt-4" >
         <ul class="flex w-[20rem] bg-[#D6D6B1]  justify-around rounded-full border border-black" >
-            <li class="h-full duration-150 rounded-s-full cursor-pointer w-full hover:bg-[#908D71]" style="padding: 1rem;">Proyectos</li>
-            <li class="h-full duration-150 w-full hover:bg-[#908D71] cursor-pointer" style="padding: 1rem;">Sobre mi</li>
-            <li class="h-full duration-150 rounded-e-full cursor-pointer w-full hover:bg-[#908D71]" style="padding: 1rem;">Contacto</li>
+            <li (click)="mostrarProyectos()" class="h-full p-4 duration-150 rounded-s-full cursor-pointer w-full hover:bg-[#908D71]">Proyectos</li>
+            <li (click)="mostrarSobreMi()" class="h-full p-4 duration-150 w-full hover:bg-[#908D71] cursor-pointer">Sobre mi</li>
+            <li (click)="mostrarContacto()" class="h-full p-4 duration-150 rounded-e-full cursor-pointer w-full hover:bg-[#908D71]">Contacto</li>
         </ul>
     </nav>
+    <section #proyectos class="hidden animate__bounceIn flex flex-wrap p-12">
+
+
+        <button type="button" data-bs-toggle="modal"  data-bs-target="#iberdrolaModal"class="w-full h-auto border mb-6 border-[#DE541E] border-2 flex rounded-xl bg-[#34342D] p-4">
+            <img src="https://www.liderlogo.es/wp-content/uploads/2022/12/IBE.MC-a357ed2a.png" class="w-[20px] h-[20px] h-auto absolute" >
+            <p class="text-[#E3E3CA] font-bold text-xl pt-4 pl-4 text-center">
+                Boceto de Aplicación para Generación de Documentos en la Intranet de Iberdrola
+            </p>
+        </button>
+        <div class="modal fade" id="iberdrolaModal" tabindex="-1" aria-labelledby="iberdrolaModalLabel" aria-hidden="true">
+            <div class="modal-dialog p-8">
+              <div class="modal-content bg-[#393932] p-8">
+                <div class="modal-header p-2">
+                  <h1 class="modal-title fs-5 text-[#D5D5AF] font-bold text-xl" id="iberdrolaModalLabel">Boceto de Aplicación para Generación de Documentos en la Intranet de Iberdrola</h1>
+                  <button type="button" data-bs-dismiss="modal"><i class="fa-solid fa-xmark text-[#DE541E] text-2xl absolute top-4"></i></button>
+                </div>
+                <div class="modal-body p-2">
+                    <p class="text-[#D5D5AF]">
+                        Desarrollé el boceto inicial de una aplicación para la intranet de Iberdrola, destinada a automatizar la generación de documentos .docx a partir de formularios personalizados. Utilicé Express.js, Node.js y la librería docx JavaScript para crear un prototipo funcional que permitía generar más de 100 variaciones de documentos de manera automática, según los datos ingresados en los formularios.
+                        <br><br>
+                        Este boceto sirvió como base para el desarrollo final, llevado a cabo por una empresa subcontratada por Iberdrola. Mi trabajo estableció la estructura técnica y el flujo de trabajo, integrando tecnologías de frontend como HTML, CSS, JavaScript y Tailwind CSS, para proporcionar una interfaz intuitiva y responsiva, mejorando así la eficiencia en la creación de documentación interna.
+                    </p>
+                </div>
+                <div class="modal-footer p-4">
+                  <button type="button" class="btn btn-secondary text-white bg-[#DE541E] pl-2 pr-2 pt-1 pb-1" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+          <button type="button" data-bs-toggle="modal"  data-bs-target="#bonesModal"class="w-full h-auto border border-[#DE541E] border-2 flex rounded-xl bg-[#34342D] p-4">
+            <img src="https://static-00.iconduck.com/assets.00/tensorflow-icon-955x1024-hd4xzbqj.png" class="w-[20px] h-[20px] h-auto absolute" >
+            <p class="text-[#E3E3CA] font-bold text-xl pt-4 pl-4 text-center">
+                Sistema de Diagnóstico de Radiografías con Inteligencia Artificial
+            </p>
+        </button>
+        <div class="modal fade" id="bonesModal" tabindex="-1" aria-labelledby="bonesModalLabel" aria-hidden="true">
+            <div class="modal-dialog p-8">
+              <div class="modal-content bg-[#393932] p-8">
+                <div class="modal-header p-2">
+                  <h1 class="modal-title fs-5 text-[#D5D5AF] font-bold text-xl" id="bonesModalLabel">Sistema de Diagnóstico de Radiografías con Inteligencia Artificial</h1>
+                  <button type="button" data-bs-dismiss="modal"><i class="fa-solid fa-xmark text-[#DE541E] text-2xl absolute top-4"></i></button>
+                </div>
+                <div class="modal-body p-2">
+                    <p class="text-[#D5D5AF]">
+                        Este proyecto de fin de curso es una aplicación web avanzada que utiliza técnicas de aprendizaje automático para el análisis de imágenes de radiografías. Desarrollado con TensorFlow en el entorno de desarrollo PyCharm y Jupyter-Lab, el sistema está construido en Python y hace uso de una base de datos de imágenes de radiografías disponible en Kaggle.
+                        <br><br><br>
+                        <span class="font-bold text-xl text-[#E07849]">Características Principales:</span>
+                        <br><br>
+                        <span class="font-bold text-[#E19C74]">Análisis Automatizado:</span> La aplicación emplea un modelo de inteligencia artificial entrenado para identificar fracturas en radiografías. Al cargar una imagen de radiografía, el sistema analiza y proporciona un diagnóstico sobre si el hueso está roto o no.
+                        <br><br>
+                        <span class="font-bold text-[#E19C74]">Interfaz de Usuario Completa:</span> La plataforma incluye funcionalidades de registro, inicio de sesión y recuperación de contraseña, permitiendo a los usuarios gestionar su acceso y seguridad de forma eficiente.
+                        <br><br>
+                        <span class="font-bold text-[#E19C74]">Historial de Radiografías:</span> Los usuarios pueden consultar un historial completo de sus radiografías analizadas, gracias a la integración de bases de datos y APIs que almacenan y gestionan las imágenes de cada usuario de manera segura.
+                        <br><br><br>
+                        <span class="font-bold text-xl text-[#E07849]">Tecnologías Utilizadas:</span>
+                        <br><br>
+                        <span class="font-bold text-[#E19C74]">TensorFlow:</span> Para el desarrollo y entrenamiento del modelo de IA que realiza el análisis de las imágenes.
+                        Python: Lenguaje principal utilizado para el desarrollo del modelo y la lógica del backend.
+                        <br><br>
+                        
+                        <span class="font-bold text-[#E19C74]">Jupyter-Lab:</span> Entorno de desarrollo para la experimentación y visualización de datos.
+                        <br><br>
+                        <span class="font-bold text-[#E19C74]">Bases de Datos y APIs:</span> Para el almacenamiento y gestión de imágenes y datos de usuarios.
+                        <br><br><br>
+                        Este proyecto demuestra mi capacidad para integrar tecnologías avanzadas en un entorno práctico y funcional, resolviendo problemas reales mediante el uso de inteligencia artificial y desarrollo web.
+                    </p>
+                </div>
+                <div class="modal-footer p-4">
+                  <button type="button" class="btn btn-secondary text-white bg-[#DE541E] pl-2 pr-2 pt-1 pb-1" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
     
+
+
+
+
+
+
+
+
+
+
+    </section>
+    <section #sobre_mi class="hidden animate__bounceIn">
+        <article class="p-12">
+            <p class="text-[#D6D6B1]">
+                Soy un programador full stack con más de dos años de experiencia desarrollando soluciones innovadoras, tanto en frontend como en backend, especializado en Python, JavaScript y bases de datos MySQL. Durante mi tiempo en Iberdrola, lideré el desarrollo de una aplicación clave para la intranet de la empresa, contribuyendo a mejorar la eficiencia operativa y la gestión de datos internos.
+                <br/> <br/>
+                Tengo sólidos conocimientos en Vue.js y Angular para el desarrollo de interfaces dinámicas, y en Node.js y Express para construir aplicaciones backend escalables. Además, domino herramientas como Tailwind para el diseño responsivo y Flask para la creación de APIs robustas.
+                <br/> <br/>
+                Me apasiona trabajar en entornos colaborativos, resolver problemas complejos y aplicar las mejores prácticas en desarrollo para crear aplicaciones eficientes y de alta calidad.
+            </p>
+        </article>
+    </section>
+    <section #contacto class="hidden p-12 flex flex-col animate__bounceIn">
+        <article id="linkedin" class="flex border shadow p-2 rounded w-full items-center h-auto border-[#878472]">
+            <div class="bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRokEYt0yyh6uNDKL8uksVLlhZ35laKNQgZ9g&s')] bg-cover rounded w-14 h-14"></div>
+            <a target="_blank" class="pl-4 text-[#D6D6B1] font-bold" href="http://www.linkedin.com/in/david-barriuso-rozalén-b80a84298">David Barriuso Rozalén</a>
+            <a href="http://www.linkedin.com/in/david-barriuso-rozalén-b80a84298" class="flex items-center pl-4">
+                <i class="fa-solid fa-right-from-bracket text-[#DE541E] text-2xl"></i>
+            </a>
+        
+        </article>
+        <article id="github" class="flex mt-4 border shadow p-2 rounded w-full items-center h-auto border-[#878472]">
+            <div class="bg-[url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Github-desktop-logo-symbol.svg/2048px-Github-desktop-logo-symbol.svg.png')] bg-cover rounded w-14 h-14"></div>
+            <a target="_blank" class="pl-4 text-[#D6D6B1] font-bold" href="https://github.com/Juanolas27">David Barriuso Rozalén</a>
+            <a href="https://github.com/Juanolas27" class="flex items-center pl-4">
+                <i class="fa-solid fa-right-from-bracket text-[#DE541E] text-2xl"></i>
+            </a>
+        
+        </article>
+        <article id="instagram" class="flex mt-4 border shadow p-2 rounded w-full items-center h-auto border-[#878472]">
+            <div class="bg-[url('https://1000marcas.net/wp-content/uploads/2019/11/Instagram-Logo.png')] bg-cover bg-center rounded w-14 h-14"></div>
+            <a target="_blank" class="pl-4 text-[#D6D6B1] font-bold" href="https://www.instagram.com/david_barriuso_27/">David Barriuso Rozalén</a>
+            <a href="https://www.instagram.com/david_barriuso_27/" class="flex items-center pl-4">
+                <i class="fa-solid fa-right-from-bracket text-[#DE541E] text-2xl"></i>
+            </a>
+        
+        </article>
+    </section>
 </section>
 
 <router-outlet />
